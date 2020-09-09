@@ -11,8 +11,12 @@
     />
   </head>
   <body>
+    <div id="togglebutton" onclick="show()"><i class="ri-menu-line"></i></div>
     <div class="container">
-      <div class="leftSec">
+      <div id="leftSec">
+        <div id="crossbutton" onclick="hide()">
+          <i class="ri-close-line"></i>
+        </div>
         <div id="profile">
           <img
             src="https://images.unsplash.com/photo-1521488741203-dcc320950ce5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80"
@@ -24,29 +28,29 @@
         <ul id="menu">
           <li>
             <div class="iconBox"><i class="ri-home-line"></i></div>
-            <h4>Home</h4>
+            <h4 class="item">Home</h4>
           </li>
           <li>
             <div class="iconBox">
               <i class="ri-checkbox-blank-circle-line"></i>
             </div>
-            <h4>International</h4>
+            <h4 class="item">International</h4>
           </li>
           <li>
             <div class="iconBox"><i class="ri-building-2-line"></i></div>
-            <h4>Business</h4>
+            <h4 class="item">Business</h4>
           </li>
           <li>
             <div class="iconBox"><i class="ri-play-line"></i></div>
-            <h4>Entertainment</h4>
+            <h4 class="item">Entertainment</h4>
           </li>
           <li>
             <div class="iconBox"><i class="ri-t-shirt-line"></i></div>
-            <h4>Sports</h4>
+            <h4 class="item">Sports</h4>
           </li>
           <li>
             <div class="iconBox"><i class="ri-hospital-line"></i></div>
-            <h4>Health</h4>
+            <h4 class="item">Health</h4>
           </li>
         </ul>
         <div id="upgradeBox">
@@ -56,7 +60,7 @@
           <i class="ri-xbox-line"></i>
         </div>
       </div>
-      <div class="rightSec">
+      <div id="rightSec">
         <div id="head">
           <div id="greet">
             <img
@@ -115,7 +119,7 @@
             <h4>Subscribe to Newsletter</h4>
             <div id="emailBox">
               <input type="text" placeholder="Enter email" />
-              <button><i class="ri-mail-line"></i></button>
+              <button><i class="ri-mail-open-line"></i></button>
             </div>
           </div>
           <div id="midmid" class="midBox">
@@ -151,12 +155,12 @@
               <div id="leftcontent">
                 <button>Featured</button>
                 <p id="titlep">
-                  Natural mood regulation low or even absent<br>in people with
+                  Natural mood regulation low or even absent in people with
                   depression
                 </p>
                 <p id="parap">
                   Mood varies from hour-to-hour and healthy mood regulation
-                  involves <br>choosing activities that help settle ones mood.
+                  involves choosing activities that help settle ones mood.
                 </p>
               </div>
               <div id="rightcontent">
@@ -170,13 +174,34 @@
           <div id="rightbottom">
             <h1>Author<br /><span>of the month</span></h1>
             <div id="imgbottom">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="" />
-              <h4>Benjamin<br><span>Pete Jonas</span></h4>
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                alt=""
+              />
+              <h4>Benjamin<br /><span>Pete Jonas</span></h4>
             </div>
             <a href="#">Know more <i class="ri-arrow-right-line"></i></a>
           </div>
         </div>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let leftp = document.querySelector('#leftSec');
+      let rightp = document.querySelector('#rightSec');
+      function show() {
+        leftp.style.left = "0%";
+        rightp.style.opacity = ".5";
+        
+      }
+      function hide() {
+        leftp.style.left = "-100%";
+        rightp.style.opacity = "1";
+      }
+    </script>
   </body>
 </html>
